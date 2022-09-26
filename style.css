@@ -1,7 +1,13 @@
 * {
     box-sizing: border-box;
+    font-family: "Pokemon Classic", sans-serif;
 }
-  
+
+@font-face {
+    font-family: 'Pokemon Classic';
+    src: url(assets/Pokemon\ Classic.ttf);
+  }
+
 html {
     scroll-behavior: smooth;
 }
@@ -10,6 +16,36 @@ html {
     display: none !important;
 }
 
+div.landingText {
+    position: relative;
+    top: 50px;
+    padding: 50px;
+
+    text-align: center;
+    height: 550px;
+
+    background-image: url(assets/background.png);
+    background-repeat: repeat;
+}
+
+div.landingText > img {
+    height: 200px;
+}
+
+div.landingText > h2 {
+    font-size: 10pt;
+    color: #284D67;
+}
+
+div.landingText > button {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #546868;
+    border-radius: 20px;
+    color: #546868;
+    background-color: #F8FAD3;
+    padding: 10px 25px 10px 25px;
+}
 /* Nav bar styling */
 ul.navbar {
     position: fixed;
@@ -22,7 +58,9 @@ ul.navbar {
     margin: 0;
     padding: 10px;
     overflow: hidden;
-    background-color: #0C2136;
+    background-color: #284D67;
+
+    font-size: 12px;
 }
 
 ul.navbar li {
@@ -38,9 +76,13 @@ ul.navbar li a {
     transition-duration: 0.3s;
 }
 
-ul.navbar li.register {
+ul.navbar li.highlight {
+    border-style: solid;
     border-radius: 15px;
-    background-color: #123345;
+    border-width: 2px;
+    border-color: #FFFFFF;
+
+    background-color: #C9AA3F;
 }
 
 ul.navbar li a:hover {
